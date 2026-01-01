@@ -6,7 +6,7 @@ class Solution {
         int topWall = 0;
         int leftWall =0;
         int num = 1;
-        int right=0,left = 1,top = 2, down = 3;
+        int right=10,left = 11,top = 21, down = 31;
         int dir=right;
         while(num<=n*n){
             if(dir==right){
