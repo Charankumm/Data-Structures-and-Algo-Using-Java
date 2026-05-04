@@ -1,17 +1,20 @@
 class Solution {
     public int numberOfSteps(int num) {
-        int sum = 0;
-        while(num>0){
-            if(num%2==0){
-                num = num/2;
-                sum = sum +1;
-            }
-            else{
-                num=num-1;
-                sum = sum+1;
-            }
-        }
-        return sum;
-        
+        return rec(num,0);
     }
+       
+       private int rec(int n,int c){
+        if(n==0){
+            return c;
+        }
+        if(n%2==0){
+            return rec(n/2, c+1);
+
+        }
+        else{
+            return rec(n-1,c+1);
+        }
+
+       } 
+    
 }
